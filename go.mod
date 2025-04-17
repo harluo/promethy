@@ -1,4 +1,4 @@
-module github.com/heluon/promethy
+module github.com/harluo/promethy
 
 go 1.24
 
