@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/harluo/boot"
+	"github.com/harluo/config"
 )
 
 type Prometheus struct {
@@ -13,9 +13,9 @@ type Prometheus struct {
 	Labels map[string]string `json:"labels" yaml:"labels" xml:"labels" toml:"labels"`
 }
 
-func newPrometheus(config *boot.Config) (prometheus *Prometheus, err error) {
+func newPrometheus(config *config.Getter) (prometheus *Prometheus, err error) {
 	prometheus = new(Prometheus)
-	err = config.Build().Get(&struct {
+	err = config.Get(&struct {
 		Prometheus *Prometheus `json:"prometheus,omitempty" valprometheusate:"required"`
 	}{
 		Prometheus: prometheus,
