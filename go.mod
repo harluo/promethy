@@ -6,6 +6,7 @@ require (
 	github.com/goexl/log v0.0.9
 	github.com/goexl/promethy v0.1.6
 	github.com/harluo/boot v1.6.7
+	github.com/harluo/config v0.0.2
 	github.com/harluo/di v0.0.3
 	github.com/prometheus/client_golang v1.22.0
 )
@@ -33,7 +34,6 @@ require (
 	github.com/goexl/valuer v0.0.6 // indirect
 	github.com/goexl/xiren v0.0.8 // indirect
 	github.com/google/uuid v1.6.0 // indirect
-	github.com/harluo/config v0.0.2 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/mattn/go-runewidth v0.0.16 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
@@ -41,7 +41,7 @@ require (
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/prometheus/client_model v0.6.2 // indirect
 	github.com/prometheus/common v0.63.0 // indirect
-	github.com/prometheus/procfs v0.16.0 // indirect
+	github.com/prometheus/procfs v0.16.1 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/rs/xid v1.6.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
