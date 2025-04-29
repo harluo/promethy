@@ -5,20 +5,20 @@ go 1.24
 require (
 	github.com/goexl/log v0.0.9
 	github.com/goexl/promethy v0.1.6
-	github.com/harluo/boot v1.6.7
-	github.com/harluo/config v0.0.2
-	github.com/harluo/di v0.0.3
+	github.com/harluo/boot v1.7.1
+	github.com/harluo/config v0.0.4
+	github.com/harluo/di v0.0.5
 	github.com/prometheus/client_golang v1.22.0
 )
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/cpuguy83/go-md2man/v2 v2.0.6 // indirect
+	github.com/cpuguy83/go-md2man/v2 v2.0.7 // indirect
 	github.com/drone/envsubst v1.0.3 // indirect
 	github.com/expr-lang/expr v1.17.2 // indirect
 	github.com/fsnotify/fsnotify v1.9.0 // indirect
-	github.com/gabriel-vasile/mimetype v1.4.8 // indirect
+	github.com/gabriel-vasile/mimetype v1.4.9 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.26.0 // indirect
