@@ -5,7 +5,7 @@ go 1.24
 require (
 	github.com/goexl/log v0.1.0
 	github.com/goexl/promethy v0.1.6
-	github.com/harluo/config v0.0.7
+	github.com/harluo/config v0.0.8
 	github.com/harluo/di v0.0.5
 	github.com/prometheus/client_golang v1.22.0
 )
