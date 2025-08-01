@@ -7,7 +7,7 @@ require (
 	github.com/goexl/promethy v0.1.6
 	github.com/harluo/config v0.0.7
 	github.com/harluo/di v0.0.5
-	github.com/prometheus/client_golang v1.22.0
+	github.com/prometheus/client_golang v1.23.0
 )
 
 require (
