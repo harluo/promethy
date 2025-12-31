@@ -6,17 +6,17 @@ import (
 
 type Prometheus struct {
 	// 是否开启
-	Enabled *bool `default:"true" json:"enabled" yaml:"enabled" xml:"enabled" toml:"enabled"`
+	Enabled *bool `default:"true" json:"enabled,omitempty"`
 	// 路径
-	Path string `default:"/metrics" json:"path" yaml:"path" xml:"path" toml:"path" valprometheusate:"required"`
+	Path string `default:"/metrics" json:"path,omitempty" validate:"required"`
 	// 标签
-	Labels map[string]string `json:"labels" yaml:"labels" xml:"labels" toml:"labels"`
+	Labels map[string]string `json:"labels,omitempty"`
 }
 
-func newPrometheus(config *config.Getter) (prometheus *Prometheus, err error) {
+func newPrometheus(getter config.Getter) (prometheus *Prometheus, err error) {
 	prometheus = new(Prometheus)
-	err = config.Get(&struct {
-		Prometheus *Prometheus `json:"prometheus,omitempty" valprometheusate:"required"`
+	err = getter.Get(&struct {
+		Prometheus *Prometheus `json:"prometheus,omitempty" validate:"required"`
 	}{
 		Prometheus: prometheus,
 	})
