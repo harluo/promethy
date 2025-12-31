@@ -7,7 +7,6 @@ require (
 	github.com/goexl/promethy v0.1.6
 	github.com/harluo/config v0.0.8
 	github.com/harluo/di v0.0.5
-	github.com/prometheus/client_golang v1.23.2
 )
 
 require (
@@ -49,6 +48,7 @@ require (
 	github.com/olekukonko/errors v1.1.0 // indirect
 	github.com/olekukonko/ll v0.1.3 // indirect
 	github.com/olekukonko/tablewriter v1.1.2 // indirect
+	github.com/prometheus/client_golang v1.23.2 // indirect
 	github.com/prometheus/client_model v0.6.2 // indirect
 	github.com/prometheus/common v0.67.4 // indirect
 	github.com/prometheus/procfs v0.19.2 // indirect

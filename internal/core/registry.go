@@ -7,17 +7,17 @@ import (
 
 	"github.com/goexl/log"
 	"github.com/goexl/promethy"
+	"github.com/harluo/httpd"
 	"github.com/harluo/promethy/internal/config"
 	"github.com/harluo/promethy/internal/constant"
-	"github.com/prometheus/client_golang/prometheus"
 )
 
-type Registry = prometheus.Registry
+type Registry = promethy.Registry
 
 func newRegistry(
 	prometheus *config.Prometheus,
-	mux *http.ServeMux, logger log.Logger,
-) (registry *promethy.Registry, err error) {
+	server *httpd.Server, logger log.Logger,
+) (registry *Registry, err error) {
 	builder := promethy.New()
 	builder.Logger(logger)
 	for key, value := range prometheus.Labels {
@@ -35,7 +35,9 @@ func newRegistry(
 	if handler, he := prom.Handler().Handle(); nil != he {
 		err = he
 	} else {
+		mux := http.NewServeMux()
 		mux.Handle(prometheus.Path, handler)
+		server.Http().Handler = mux
 	}
 
 	return
