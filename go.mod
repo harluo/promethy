@@ -7,7 +7,7 @@ require (
 	github.com/goexl/promethy v0.1.6
 	github.com/harluo/config v0.0.8
 	github.com/harluo/di v0.0.5
-	github.com/harluo/httpd v0.0.5
+	github.com/harluo/httpd v0.0.6
 )
 
 require (
