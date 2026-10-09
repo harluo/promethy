@@ -4,4 +4,4 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 )
 
-type CounterOpts = prometheus.HistogramVec
+type CounterOpts = prometheus.CounterOpts
