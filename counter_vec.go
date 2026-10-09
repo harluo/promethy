@@ -4,4 +4,4 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 )
 
-type CounterVec prometheus.CounterVec
+type CounterVec = prometheus.CounterVec
