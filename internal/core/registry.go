@@ -34,6 +34,8 @@ func newRegistry(
 	registry = prom.Register()
 	if handler, he := prom.Handler().Handle(); nil != he {
 		err = he
+	} else if prometheus.Port == server.Port() {
+		server.Get(prometheus.Path, handler)
 	} else {
 		mux := http.NewServeMux()
 		mux.Handle(prometheus.Path, handler)

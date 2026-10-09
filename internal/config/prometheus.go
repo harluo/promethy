@@ -7,6 +7,8 @@ import (
 type Prometheus struct {
 	// 是否开启
 	Enabled *bool `default:"true" json:"enabled,omitempty"`
+	// 端口
+	Port uint16 `json:"port,omitempty"`
 	// 路径
 	Path string `default:"/metrics" json:"path,omitempty" validate:"required"`
 	// 标签
