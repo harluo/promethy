@@ -6,21 +6,21 @@ import (
 	"strings"
 
 	"github.com/goexl/log"
-	"github.com/goexl/promethy"
+	"github.com/goexl/prometheus"
 	"github.com/harluo/httpd"
 	"github.com/harluo/prometheus/internal/config"
 	"github.com/harluo/prometheus/internal/constant"
 )
 
-type Registry = promethy.Registry
+type Registry = prometheus.Registry
 
 func newRegistry(
-	prometheus *config.Prometheus,
+	conf *config.Prometheus,
 	server *httpd.Server, logger log.Logger,
 ) (registry *Registry, err error) {
-	builder := promethy.New()
+	builder := prometheus.New()
 	builder.Logger(logger)
-	for key, value := range prometheus.Labels {
+	for key, value := range conf.Labels {
 		builder.Label(key, value)
 	}
 	// 加载特殊的环境变量
@@ -34,11 +34,11 @@ func newRegistry(
 	registry = prom.Register()
 	if handler, he := prom.Handler().Handle(); nil != he {
 		err = he
-	} else if prometheus.Port == server.Port() {
-		server.Get(prometheus.Path, handler)
+	} else if conf.Port == 0 || conf.Port == server.Port() {
+		server.Get(conf.Path, handler)
 	} else {
 		mux := http.NewServeMux()
-		mux.Handle(prometheus.Path, handler)
+		mux.Handle(conf.Path, handler)
 		server.Http().Handler = mux
 	}
 
