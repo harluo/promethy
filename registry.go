@@ -1,7 +1,7 @@
-package promethy
+package prometheus
 
 import (
-	"github.com/harluo/promethy/internal/core"
+	"github.com/harluo/prometheus/internal/core"
 )
 
 // Registry 注册表

@@ -8,8 +8,8 @@ import (
 	"github.com/goexl/log"
 	"github.com/goexl/promethy"
 	"github.com/harluo/httpd"
-	"github.com/harluo/promethy/internal/config"
-	"github.com/harluo/promethy/internal/constant"
+	"github.com/harluo/prometheus/internal/config"
+	"github.com/harluo/prometheus/internal/constant"
 )
 
 type Registry = promethy.Registry
